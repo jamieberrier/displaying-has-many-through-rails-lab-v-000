@@ -5,7 +5,7 @@
 <h3>Appointments</h3>
 <% @doctor.appointments.each do |appointment| %>
 <% binding.pry %>
-  <%= appointment.appointment_datetime.strftime(%B %d) %> --
+  <%= appointment.appointment_datetime.strftime(%B %d, %Y) %> --
   <%= link_to appointment.patient.name, patient_path(appointment.patient) %>
   <br>
 <% end %>
